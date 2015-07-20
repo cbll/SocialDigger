@@ -1,5 +1,8 @@
 # SocialDigger
-A CRM analytics tool for social media
+
+A CRM analytics tool for your social media.
 
 
-Using the Python web framework Flask together with the flask-bootstrap template. Will after add the sb2-admin bootstrap template together with SQL-Alchemy functions for the backenc.
+Backend: Python web framework "Flask"
+
+Frontend: Basic bootstrap template, will integrate sb2-admin template soon. 
