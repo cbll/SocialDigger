@@ -11,6 +11,8 @@ from app.mod_users.controllers import users, login_manager, csrf
 
 import os
 
+
+
 def create_app(config=None):
 
     app = Flask(__name__)
