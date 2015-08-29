@@ -3,15 +3,30 @@
 /* Bootstrap overrides */
 /* ******************** */
 
+.navbar-static-top{
+  background-color: #FF0000 !important;
+}
+.navbar-inverse{
+  background-color: #FF0000 !important;
+}
+.navbar-header{
+  background-color: #FF0000 !important;
+}
+.navcontainer{
+  background-color: #FF0000 !important;
+}
+.navbar-nav{
+  background-color: #FF0000 !important;
+}
 .navbar-inverse .navbar-nav>li>a {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
   color: #fcf8e3 !important;
 }
 .navbar-brand {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 a.navbar-brand:hover {
