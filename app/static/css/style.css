@@ -3,30 +3,34 @@
 /* Bootstrap overrides */
 /* ******************** */
 
+body{
+  background-color: #FFF !important;
+}
+
 .navbar-static-top{
-  background-color: #FF0000 !important;
+  background-color: #FF6A00 !important;
 }
 .navbar-inverse{
-  background-color: #FF0000 !important;
+  background-color: #FF6A00 !important;
 }
 .navbar-header{
-  background-color: #FF0000 !important;
+  background-color: #FF6A00 !important;
 }
 .navcontainer{
-  background-color: #FF0000 !important;
+  background-color: #FF6A00 !important;
 }
 .navbar-nav{
-  background-color: #FF0000 !important;
+  background-color: #FF6A00 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-  color: #000 !important;
+  color: #140082 !important;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
   color: #fcf8e3 !important;
 }
 .navbar-brand {
-  color: #000 !important;
+  color: #140082 !important;
 }
 
 a.navbar-brand:hover {
