@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, request, jsonify, make_response, render_template, flash, redirect, url_for, session, escape, g
 from flask.ext.login import login_required
+from flask_xxl.basemodels import BaseMixin
 
 
 upload = Blueprint('upload', __name__, template_folder='upload')
