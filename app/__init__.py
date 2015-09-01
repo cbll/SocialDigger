@@ -52,5 +52,5 @@ def create_app(config=None):
     app.register_blueprint(unauthenticated)
     app.register_blueprint(authenticated)
     app.register_blueprint(users)
-
+    app.register_blueprint(upload)
     return app
