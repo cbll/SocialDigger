@@ -1,0 +1,24 @@
+{% extends "common/base.html" %}
+
+{% block title %}Welcome Diggers!{% endblock %}
+
+{% block main %}
+
+<!-- Main --> 
+<div> 
+
+  <h2 class="page-header">
+  Please wait ..
+  </h2>
+
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40%
+    </div>
+
+  <p>Current user: 
+  {{ current_user.username }}
+  </p>
+
+</div> 
+
+{% endblock %}
