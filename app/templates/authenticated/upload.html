@@ -5,20 +5,13 @@
 {% block main %}
 
 <!-- Main --> 
-<div> 
-
-  <h2 class="page-header">
-  Please enter your data ..
-  </h2>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <input type="text" name="input">
-  <p><a href="/authenticated/process/" class="btn btn-primary btn-large">Submit</a></p>
-
-  <p>Current user: 
-  {{ current_user.username }}
-  </p>
-
-</div> 
+<body>
+  <h1>Enter your Tweets!</h1>
+  <h2>It will be converted to UPPERCASE.</h2>
+  <form action="." method="POST">
+    <input type ="text" name "text">
+    <input type = "submit" name="upload-tweet" value=Send">
+  </form>
+</body>
 
 {% endblock %}

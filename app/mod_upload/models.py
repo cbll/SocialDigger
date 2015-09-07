@@ -1,4 +1,4 @@
-from database import db
+import sqlalchemy as db
 
 tweet = tweet()
 tweet.text = 'some text'
