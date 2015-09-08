@@ -9,3 +9,14 @@ app.config.setdefault('TWEEPY_ACCESS_TOKEN_SECRET', '357nVGYtynDtDBmqAZw2vxeXE3F
 
 tweepy = Tweepy(app)
 
+@app.route('/tweets')
+def show_tweets():
+    tweets = tweepy.api.public_timeline()
+    return render_template('tweets.html', tweets=tweets)
+
+@app.route('/say-something')
+def say_something():
+    status = tweepy.api.update_status('Hello, world!')
+    status_link = 'http://twitter.com/#!/YourUserName/status/%s' % status.id
+    return render_template('what_i_said.html', status_link=status_link)
+
