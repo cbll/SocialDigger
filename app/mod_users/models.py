@@ -14,7 +14,8 @@ class User(db.Model):
     # just use a name for all those cultures that have no middle, first, etc. distinction
     name = db.Column(db.String(240))
     role = db.Column(db.SmallInteger, default = ROLE_USER)
-    created_on = db.Column(db.DateTime)      
+    created_on = db.Column(db.DateTime)
+    images = db.relationship("WordCloudImage", backref="user")
 
     def is_authenticated(self):
         return True
@@ -42,3 +43,19 @@ class Title(db.Model):
 
     def __repr__(self):
         return '<Title: %r>' % self.title
+
+
+class WordCloudImage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    twitter_username = db.Column(db.String(60))
+    image_url = db.Column(db.String(120))
+    created = db.Column(db.DateTime, server_default=db.func.now())
+
+
+class TweetsStack(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    twitter_username = db.Column(db.String(60))
+    tweets_json = db.Column(db.Text)
+    last_tweet_id = db.Column(db.String(50))
+    created = db.Column(db.DateTime, server_default=db.func.now())

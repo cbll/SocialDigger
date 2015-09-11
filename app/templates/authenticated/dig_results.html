@@ -1,0 +1,25 @@
+{% extends "common/base.html" %}
+
+{% block title %}Welcome Diggers!{% endblock %}
+
+{% block main %}
+
+<!-- Main --> 
+<div>
+  <h2 class="page-header">All your dig results</h2>
+
+  <ol>
+    {% for r in results %}
+      <li>
+        <a href="{{ url_for('authenticated.dig_result', wci_id=r.id) }}">
+          @{{ r.twitter_username }} {{ r.created }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+
+
+
+</div>
+
+{% endblock %}

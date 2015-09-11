@@ -1,0 +1,25 @@
+{% extends "common/base.html" %}
+
+{% block title %}Welcome Diggers!{% endblock %}
+
+{% block main %}
+
+<!-- Main --> 
+<div>
+  <h2 class="page-header">Enter twitter username to get wordcloud</h2>
+
+  <form class="dig-form" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <input class="twitter-username" type="text" name="username" value="{{ username }}">
+    <input class="btn btn-default" type="submit" value="Search">
+  </form>
+
+  {% if username %}
+    <img src="{{ url_for('authenticated.plt_image', username=username) }}">
+  {% endif %}
+
+  <p><a href="{{ url_for('authenticated.dig_results') }}">View all your digs</a></p>
+
+</div>
+
+{% endblock %}

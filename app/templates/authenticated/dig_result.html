@@ -1,0 +1,17 @@
+{% extends "common/base.html" %}
+
+{% block title %}Welcome Diggers!{% endblock %}
+
+{% block main %}
+
+<!-- Main --> 
+<div>
+  <h2 class="page-header">WordCloud Image for @{{ wci.twitter_username }} searched on {{ wci.created }}</h2>
+
+  <img src="{{ wci.image_url }}">
+
+
+
+</div>
+
+{% endblock %}
