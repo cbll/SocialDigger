@@ -15,7 +15,7 @@ from werkzeug.exceptions import abort
 
 from app.database import db
 from app.mod_users.models import WordCloudImage, TweetsStack
-from config import MEDIA_ROOT, MEDIA_URL
+from config import WC_IMAGES_ROOT, WC_IMAGES_URL
 
 authenticated = Blueprint('authenticated', __name__, url_prefix='/authenticated', template_folder='authenticated')
 
@@ -94,9 +94,9 @@ def plt_image(username):
     canvas.print_png(output)
 
     filename = '%s-%s.png' % (current_user.id, int(time.time()))
-    filepath = '%s/%s' % (MEDIA_ROOT, filename)
+    filepath = '%s/%s' % (WC_IMAGES_ROOT, filename)
     plt.savefig(filepath)
-    url = '%s%s' % (MEDIA_URL, filename)
+    url = '%s%s' % (WC_IMAGES_URL, filename)
     image_obj = WordCloudImage(user_id=current_user.id, image_url=url, twitter_username=username)
     db.session.add(image_obj)
     db.session.commit()
